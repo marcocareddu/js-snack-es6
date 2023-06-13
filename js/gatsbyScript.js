@@ -1,4 +1,5 @@
-console.log('JS OK')
+console.log('**************************** GATSBY SCRIPT ****************************');
+
 
 // PHASE 1
 // Crate vars and arrays

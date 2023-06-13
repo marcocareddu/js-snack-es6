@@ -1,4 +1,4 @@
-console.log('JS OK')
+console.log('**************************** STUDENT SCRIPT ****************************');
 
 // PHASE 1
 // Crate vars and arrays
@@ -40,3 +40,25 @@ const students = [
     }
 
 ];
+
+// Create arrays with Grades over 70 
+const over70 = students.filter(student => student.grade > 70);
+
+// Create arrays with Grades over 70 and ID over 120
+const over70And120 = students.filter(student => (student.grade > 70 && student.id > 120));
+
+// Create array with uppercase names
+const upperCaseName = students.map(student => {
+    return student.name.toUpperCase();
+});
+
+
+// Print in console
+console.table('----------------- GRADE OVER 70 -----------------');
+console.table(over70);
+
+console.table('----------------- GRADE OVER 70 AND ID OVER 120 -----------------');
+console.table(over70And120);
+
+console.table('----------------- UPPERCASE NAME -----------------');
+console.log(upperCaseName);
