@@ -1,6 +1,12 @@
 console.log('**************************** SOCCER SCRIPT ****************************');
 
 // * PHASE 1
+
+// ? *********************** FUNCTIONS ***********************
+// Generate random numbers
+function generateNumber(min, max) { return Math.floor(Math.random() * (max - min)) + min; };
+// ? *********************************************************
+
 // Link to DOM elements
 const soccerElement = document.getElementById('soccer');
 
