@@ -48,3 +48,7 @@ for (let element of bikes) {
         toInject = `<p>La bici più leggera è la ${name} e pesa ${weight}kg </p>`
     }
 };
+
+// Print in DOM & Console
+bikeElement.innerHTML = toInject;
+console.log(lighterBike);
