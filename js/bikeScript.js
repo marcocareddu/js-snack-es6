@@ -51,4 +51,4 @@ for (let element of bikes) {
 
 // Print in DOM & Console
 bikeElement.innerHTML = toInject;
-console.log(lighterBike);
+console.table(lighterBike);
