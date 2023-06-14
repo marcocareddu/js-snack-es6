@@ -22,6 +22,22 @@ Id  Name                Grades
 196 Luigi Grimaldello 	    68
 102 Piero della Francesca   50
 120 Francesca da Polenta    84 
+ 
+SNACK 3
+Creare un array di oggetti:
+Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: name e weight.
+Stampare in console la bici con peso minore utilizzando il destructuring
+
+SNACK 4
+Creare un array di oggetti di squadre di calcio.
+Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
+nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+Generare numeri random al posto degli 0 nelle proprietà punti fatti e falli subiti.
+Infine, usando il destructuring, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+BONUS
+Stampare in pagina oltre che in console!
+
  -->
 
 # **SNACK 1** - Il Grande Gatsby
@@ -58,3 +74,40 @@ Id  Name                Grades
     - Per ogni ciclo prelevare il nome studente e passarlo in `toUpperCase()`.
     - Mettere il risultato in un array `upperCaseName`.
 - Stampare in console i 3 array `over70`, `over70And120` e `upperCaseName`.
+
+<br>
+
+# **SNACK 3** - Bici
+## FASE 1 - Preliminare
+- Collego gli elementi del DOM
+- Creo un array di oggetti `bikes` contenenti le key `name` e `weight` per ogni oggetto.
+- Creo una variabile d'appoggio `bikesWeight` con valore `10000`.
+- Creo un array chiamato `lighterBike`.
+- Creo una variabile `toInject`.
+## FASE 2 - Svolgimento
+- **CICLO FOR** per ogni oggetto in `bikes`:
+    - **SE** `weight` è minore di `bikesWeight`:
+        - Aggiorna il valore di `bikesWeight` con `weight`.
+        - Svuota `lighterBike`.
+        - Pusho l'oggetto corrente in `lighterBike`.
+        - Aggiorno la variabile `toInject` con il template literal.
+- Stampo in console `lighterBike`.
+- Stampo in pagina.
+    
+<br>
+
+# **SNACK 4** - Soccer
+## FASE 1 - Preliminare
+- Collego gli elementi del DOM
+- Creo un array di oggetti `team` contenenti le key `teamName`, `scoreDone` e `sufferedFouls` per ogni oggetto.
+- Creo una variabile con nome `stringToInject`.
+## FASE 1b - Funzioni
+- Crare una funzione chiamata `generateNumber` che accetta 2 parametri, `min` e `max`.
+## FASE 2 - Svolgimento
+- **PER OGNI** oggetto in array `team`:
+    - Assegna alla chiave `scoreDone` e `sufferedFouls` il risultato di `generateNumber`.
+- **FILTER** su `team` per generare un array `filteredResult` dei soli valori `teamName` e `sufferedFouls`.
+- Stampo in console `filteredResult`.
+- **PER OGNI** elemento di `filteredResult`:
+    - Crea un template literal da aggiungere a `stringToInject`.
+- Stampa in pagina `stringToInject`.
