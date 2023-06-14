@@ -46,3 +46,11 @@ const team = [
 
 // Crate var
 let stringToInject = '';
+
+// Assign random values to keys
+team.forEach((element, i) => {
+    element.scoreDone = generateNumber(1, 80);
+    element.sufferedFouls = generateNumber(1, 80);
+});
+
+console.table(team)
