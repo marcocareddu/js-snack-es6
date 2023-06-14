@@ -9,9 +9,10 @@ function generateNumber(min, max) { return Math.floor(Math.random() * (max - min
 
 // Link to DOM elements
 const soccerElement = document.getElementById('soccer');
+const filteredResult = [];
 
 // Create Array
-const team = [
+const teams = [
     {
         teamName: 'Juventus',
         scoreDone: 0,
@@ -48,9 +49,24 @@ const team = [
 let stringToInject = '';
 
 // Assign random values to keys
-team.forEach((element, i) => {
-    element.scoreDone = generateNumber(1, 80);
-    element.sufferedFouls = generateNumber(1, 80);
+teams.forEach(team => {
+    team.scoreDone = generateNumber(1, 80);
+    team.sufferedFouls = generateNumber(1, 80);
 });
 
-console.table(team)
+// Filter result & create template string
+for (let team of teams) {
+    const { teamName, scoreDone, sufferedFouls } = team;
+    if (team !== scoreDone) {
+        filteredResult.push({ teamName, sufferedFouls });
+        stringToInject += `<h1>${teamName}<h1>
+        <h3>Falli subiti: ${sufferedFouls}<h3>`;
+    }
+}
+
+// Display result in console
+console.table(`Questo è filteredResult`);
+console.table(filteredResult);
+
+// Display result in DOM
+soccerElement.innerHTML = stringToInject;
